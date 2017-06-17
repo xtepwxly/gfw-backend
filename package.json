@@ -1,0 +1,15 @@
+{
+  "name": "wfg-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server --env.dev",
+    "build:dev": "webpack --env.dev"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "fb": "^2.0.0"
+  }
+}
