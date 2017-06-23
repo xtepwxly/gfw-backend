@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const cors = require("./middlewares/cors");
 const { callFbApi } = require("./lib");
 const { client_id, client_secret, page_id, grant_type, access_token, gallery_id, after } = require("./credentials");
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 8080;
 
 // parse application/x-www-form-urlencoded
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
