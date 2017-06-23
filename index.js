@@ -30,4 +30,4 @@ app.post("/api/photos/pagination/", urlencodedParser, (req, res) => {
 
 app.get("*", (req, res) => res.send("Page Not Found..."));
 
-app.listen(port, () => console.log("bootstrapped"));
+app.listen(port, () => console.log(`Bootstrapped on Port: ${port}`));

@@ -3,11 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "dev": "set PORT=4444 && nodemon index.js"
+  },
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "fb": "^2.0.0",
     "helmet": "^3.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }
