@@ -1,10 +1,10 @@
 {
-  "name": "wfg-backend",
+  "name": "wfg-api",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "set PORT=4444 && nodemon index.js"
+    "dev": "set PORT=4444 && set APP_DEBUG=true && nodemon index.js"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
