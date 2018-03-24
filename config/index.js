@@ -5,4 +5,6 @@ module.exports = {
     grant_type: "client_credentials",
     page_id: "894582510645783",
     access_token: "EAAD8LEJmCd8BACUGk0842UWHEK39A3SAIxIl49FBr4ZBZAADhfnVTg41XMUfO9unOTk2vVeVUHN1TzbDY0xXasbIlcZCCnZCC5GyYZBs2IxszIAD8mogwlUx4xTY75ofdjenUlZCZAjkJ8tLON1FuqRVF1Kt2Km0c2tVLUyZC00I5AZDZD", // never expired
+    secret: 'wedding_fashion_group_aka_wfg.md', // for jwt
 };
+
