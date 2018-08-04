@@ -14,7 +14,7 @@ router.post('/login', urlencodedParser, function(req, res) {
         if (!err) {
             return res.status(200).json({ auth: true, token: reqToken })
         }
-        //else
+        // else
         // token has expired or was absent
         const uniqueId = new Date().valueOf()
         const token = jwt.sign({ id: uniqueId }, secret, {

@@ -2,7 +2,7 @@ const app = require('express')()
 const helmet = require('helmet')
 const cors = require('./cors')
 const AuthController = require('./auth/AuthController')
-const PhotosController = require('./photos/PhotosController')
+const PhotosController = require('./controllers/PhotosController')
 
 app.use(helmet())
 app.use(cors())
