@@ -8,7 +8,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 router.post('/login', urlencodedParser, function(req, res) {
     const reqToken = req.headers['x-access-token']
-    console.log(reqToken)
+    
     jwt.verify(reqToken, secret, function(err, decoded) {
         // token already issued
         if (!err) {

@@ -5,7 +5,7 @@ module.exports = {
     2018: "1495013877269307",
     grant_type: "client_credentials",
     page_id: "894582510645783",
-    access_token: "EAAD8LEJmCd8BACUGk0842UWHEK39A3SAIxIl49FBr4ZBZAADhfnVTg41XMUfO9unOTk2vVeVUHN1TzbDY0xXasbIlcZCCnZCC5GyYZBs2IxszIAD8mogwlUx4xTY75ofdjenUlZCZAjkJ8tLON1FuqRVF1Kt2Km0c2tVLUyZC00I5AZDZD", // never expired
+    access_token: "EAAD8LEJmCd8BACz6CTjGZC4k1WGX7Cz7EvDZC8nqceZA5iPilQDGt36Q95DceKej4oDO70KyOmSXWLHJE7LBaNMp5aSlH4ydZBDJZCfHRb29ZACZCW8cUNOwzzrQ1B9UJIywEc3GZBNumkXF7LDAUZC25Mb2YzxBEWeux21MOUe4pgBAgaPCCz04p", // never expired
     secret: 'wedding_fashion_group_aka_wfg.md', // for jwt
 };
 

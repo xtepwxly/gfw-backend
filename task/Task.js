@@ -10,6 +10,7 @@ const formatGalleries = (json) => {
     return {
         2017: json[0],
         2018: json[1],
+        // 2019: json[2]
     } 
 }
 

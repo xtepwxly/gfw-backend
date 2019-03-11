@@ -1,14 +1,20 @@
-function verifyPostData(req, res, next) {
-    const { year, after } = req.body || {}
-    if (!after || !year) {
-        return res.status(404).json({ error: "One or more are wrong are missed" })
+function verifyPostData(requiredParams) {
+    return (req, res, next) => {
+        const requestedParams = Object.keys(req.body)
+        
+        if (requestedParams.toString() !== requiredParams.toString()) {
+            return res.status(500).json({error: 'One or more params are missing'})
+        }
+        // else
+        
+        const requestedParamEntries = Object.entries(req.body)
+
+        for(let [key, value] of requestedParamEntries) {
+            res.locals[key] = value
+        }
+
+        next()
     }
-    // else
-    
-    res.locals.year = year
-    res.locals.after = after
-    
-    next()
 }
 
 module.exports = verifyPostData

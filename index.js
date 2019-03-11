@@ -3,12 +3,14 @@ const helmet = require('helmet')
 const cors = require('./cors')
 const AuthController = require('./auth/AuthController')
 const PhotosController = require('./controllers/PhotosController')
+const ContactUsController = require('./controllers/ContactUsController')
 
 app.use(helmet())
 app.use(cors())
 
 app.use('/api/auth', AuthController)
 app.use('/api/photos', PhotosController)
+app.use('/api/contact', ContactUsController)
 
 app.get('*', (req, res) => res.status(404).send('Page Not Found...'))
 
