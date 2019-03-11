@@ -15,6 +15,6 @@ const page = (galleryId, after) => callFbApi(`/${galleryId}/photos?pretty=0&fiel
 // get initial images
 router.get('/', VerifyToken, Task.parallel(init))
 // get next 10 images 
-router.post('/pagination', VerifyToken, urlencodedParser, VerifyPostData(['after', 'year']), Task.one(page))
+router.post('/pagination', VerifyToken, urlencodedParser, VerifyPostData(['year', 'after']), Task.one(page))
 
 module.exports = router

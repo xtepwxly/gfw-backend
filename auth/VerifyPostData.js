@@ -2,7 +2,7 @@ function verifyPostData(requiredParams) {
     return (req, res, next) => {
         const requestedParams = Object.keys(req.body)
         
-        if (requestedParams.toString() !== requiredParams.toString()) {
+        if (requestedParams.sort().toString() !== requiredParams.sort().toString()) {
             return res.status(500).json({error: 'One or more params are missing'})
         }
         // else
