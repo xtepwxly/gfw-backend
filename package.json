@@ -9,7 +9,7 @@
   "dependencies": {
     "bcryptjs": "2.4.3",
     "body-parser": "^1.17.2",
-    "express": "^4.15.3",
+    "express": "^4.17.3",
     "fb": "^2.0.0",
     "helmet": "^3.6.1",
     "jsonwebtoken": "8.2.0"
