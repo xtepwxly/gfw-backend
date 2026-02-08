@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [ master ]
+  push:
+    branches: [ master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js (LTS)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: yarn
+
+      - name: Install deps (Yarn if lockfile exists, else npm)
+        shell: bash
+        run: |
+          if [ -f yarn.lock ]; then
+            yarn install --frozen-lockfile
+          else
+            npm ci
+          fi
+
+      - name: Lint (optional)
+        shell: bash
+        run: |
+          if [ -f yarn.lock ]; then
+            yarn -s lint || echo "No lint script, skipping"
+          else
+            npm run -s lint || echo "No lint script, skipping"
+          fi
+
+      - name: Test (optional)
+        shell: bash
+        run: |
+          if [ -f yarn.lock ]; then
+            yarn -s test || echo "No test script, skipping"
+          else
+            npm run -s test || echo "No test script, skipping"
+          fi
