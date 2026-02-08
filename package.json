@@ -4,7 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "set PORT=4444 && set APP_DEBUG=true && nodemon index.js"
+    "start": "node index.js",
+    "dev": "set PORT=4444 && set APP_DEBUG=true && nodemon index.js",
+    "test": "node -e \"console.log('no tests yet')\"",
+    "lint": "node -e \"console.log('no lint yet')\""
   },
   "dependencies": {
     "bcryptjs": "2.4.3",
